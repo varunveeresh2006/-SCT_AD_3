@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.stopwatch-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.time-display {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.time-digits {
+    font-family: 'Courier New', monospace;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+}
+
+.minutes {
+    color: #93c5fd;
+}
+
+.seconds {
+    color: #86efac;
+}
+
+.milliseconds {
+    color: #fde047;
+    font-size: 2.5rem;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0.1rem;
+}
+
+.time-labels {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.control-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+}
+
+.control-btn:active {
+    transform: scale(0.95);
+}
+
+.start-btn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.start-btn:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+}
+
+.pause-btn {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    color: white;
+}
+
+.pause-btn:hover {
+    background: linear-gradient(135deg, #ea580c, #dc2626);
+}
+
+.reset-btn {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+}
+
+.reset-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+.reset-btn:disabled {
+    background: #6b7280;
+    cursor: not-allowed;
+    color: #9ca3af;
+}
+
+.reset-btn:disabled:hover {
+    transform: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.status {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.status-text {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 0.75rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.start-dot {
+    background: #10b981;
+}
+
+.reset-dot {
+    background: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .stopwatch-card {
+        padding: 1.5rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .time-digits {
+        font-size: 2rem;
+    }
+    
+    .milliseconds {
+        font-size: 1.5rem;
+    }
+    
+    .control-btn {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .time-labels {
+        gap: 1.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .legend {
+        gap: 1rem;
+    }
+}

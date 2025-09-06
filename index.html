@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="stopwatch-card">
+            <h1 class="title">Stopwatch</h1>
+            
+            <!-- Time Display -->
+            <div class="time-display">
+                <div class="time-digits">
+                    <span class="minutes">00</span>
+                    <span class="separator">:</span>
+                    <span class="seconds">00</span>
+                    <span class="separator">.</span>
+                    <span class="milliseconds">00</span>
+                </div>
+                <div class="time-labels">
+                    <span>Minutes</span>
+                    <span>Seconds</span>
+                    <span>Milliseconds</span>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="controls">
+                <button id="startPauseBtn" class="control-btn start-btn">
+                    <svg class="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5,3 19,12 5,21"></polygon>
+                    </svg>
+                    <svg class="pause-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="6" y="4" width="4" height="16"></rect>
+                        <rect x="14" y="4" width="4" height="16"></rect>
+                    </svg>
+                </button>
+
+                <button id="resetBtn" class="control-btn reset-btn" disabled>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="1,4 1,10 7,10"></polyline>
+                        <path d="M3.51,15a9,9,0,0,0,2.13,3.09,9,9,0,0,0,13.72,0,9,9,0,0,0,0-12.72,9,9,0,0,0-13.72,0A8.5,8.5,0,0,0,1.17,8.42"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Status -->
+            <div class="status">
+                <p class="status-text">Ready to start</p>
+                <div class="legend">
+                    <span class="legend-item">
+                        <div class="legend-dot start-dot"></div>
+                        Start/Pause
+                    </span>
+                    <span class="legend-item">
+                        <div class="legend-dot reset-dot"></div>
+                        Reset
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
